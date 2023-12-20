@@ -30,6 +30,14 @@ class Ber:
                 max_szolnoki = szolnoki
         print(max_szolnoki.szuletes)
 
+    def hatvani_fizetes(self):
+        osszeg = 0
+        for dolgozo in self.dolgozo_lista:
+            if dolgozo.telepules == 'Hatvan':
+                osszeg += int(dolgozo.fizetes)
+        print(osszeg)
+
 ber = Ber()
 ber.olvas_fajl()
 ber.szolnoki()
+ber.hatvani_fizetes()
